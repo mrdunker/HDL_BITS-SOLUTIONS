@@ -17,12 +17,14 @@ module top_module(
                                             
     assign next_state[D] = (state[C]&(in));
     // Output logic: 
-    //assign out = (state==D)?1:0;
-    always @(*)
+    //assign out = (state==D)?1:0;  
+    /*always @(*)
         begin
             if ((state != D))
                 out = 0;
             else
                 out = 1;
         end
+	*/
+	assign out = state[D];
 endmodule
